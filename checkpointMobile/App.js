@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
 import Us from "./src/Telas/Us";
+import Home from "./src/Telas/Home";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -12,8 +12,9 @@ export default function App() {
   
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Us">
-        <Stack.Screen name="Us" component={Us} options={{headerShown:false}}/>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="Us" component={Us}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
