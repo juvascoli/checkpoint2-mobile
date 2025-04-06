@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, Text, ScrollView, TouchableOpacity, Linking, StyleSheet } from "react-native";
+import { View, Image, Text, ScrollView, TouchableOpacity, Linking, StyleSheet, ImageBackground } from "react-native";
 
 const Equipe = ({ imageSource, name, rm, githubUrl }) => (
   <View style={styles.membroContainer}>
@@ -16,7 +16,9 @@ const Equipe = ({ imageSource, name, rm, githubUrl }) => (
 
 export default function Us() {
   return (
-    <View style={styles.container}>
+    <ImageBackground 
+    source={require('../../assets/bg.png')}
+    style={styles.container}>
       <Text style={styles.title}>Nosso Time</Text>
       <ScrollView contentContainerStyle={styles.membrosContainer}>
         <Equipe 
@@ -32,7 +34,7 @@ export default function Us() {
           githubUrl="https://github.com/juvascoli"
         />
       </ScrollView>
-    </View>
+    </ImageBackground>
   );
 }
 

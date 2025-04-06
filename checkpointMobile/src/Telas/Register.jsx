@@ -1,10 +1,20 @@
 import React from 'react';
-import {  Text, View, TouchableOpacity } from 'react-native';
+import {  Text, View, ImageBackground, StyleSheet } from 'react-native';
 
 export default function Register() {
   return (
-    <View>
+    <ImageBackground
+    source={require('../../assets/bg.png')}
+    style={styles.container}
+    >
       <Text>Essa é a tela de registro</Text>
-    </View>
+    </ImageBackground>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+  }
+});

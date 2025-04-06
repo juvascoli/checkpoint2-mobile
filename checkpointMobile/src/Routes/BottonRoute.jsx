@@ -29,30 +29,3 @@ export default function TabNavigator({route}){
     </Tab.Navigator>
     );
 }
-
-/*screenOptions={{
-    tabBarActiveTintColor: 'blue',
-    tabBarInactiveTintColor: 'gray',
-}}>
-    <Tab.Screen 
-        name="Home" 
-        component={Home}
-        options={{
-            tabBarIcon: ({color, size}) => (
-                <Ionicons name="home" size={size} color={color}/>                    
-            ),
-        }}
-    />
-    <Tab.Screen
-    name="Register"
-    commponent={Register}
-    options={{
-        tabBarIcon: ({color, size}) => (
-            <Ionicons name="home" size={size} color={color}/>
-        )
-    }}/>*/
-
-
-
-    /* <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Register" component={Register} /> */
