@@ -57,13 +57,11 @@ const styles = StyleSheet.create({
   descricao:{
     fontWeight: "bold",
     color: '#333'
-
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    marginTop: 50,
-    color: '#333',
+    marginTop: 50
   },
   membrosContainer: {
     flex: 1,
@@ -102,7 +100,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 20,
     marginBottom: 70,
-    marginHorizontal: 30, 
-    fontWeight: 'bold'
+    marginHorizontal: 30,
+    color: '#333'
   }
 });

@@ -7,8 +7,6 @@ export default function Description(){
         source={require('../../assets/bg.png')}
         style={styles.container}
         >
-
-
         </ImageBackground>
 
     )

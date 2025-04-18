@@ -34,8 +34,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
+    marginBottom: 20
   },
   subtitle:{
     fontSize: 18,
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
     lineHeight: 26,
     color: '#fff',
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   button: {
     backgroundColor: '#6A0DAD', 
