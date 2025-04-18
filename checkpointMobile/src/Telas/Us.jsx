@@ -18,7 +18,8 @@ export default function Us() {
     <ImageBackground 
     source={require('../../assets/bg.png')}
     style={styles.container}>
-      <Text style={styles.title}>Membros</Text>
+      <Text style={styles.title}>Quem somos?</Text>
+
       <ScrollView contentContainerStyle={styles.membrosContainer}>
         <Equipe 
           imageSource={require("../../assets/matheus.png")} 
@@ -32,7 +33,17 @@ export default function Us() {
           rm="558785" 
           githubUrl="https://github.com/juvascoli"
         />
+
       </ScrollView>
+
+      <Text 
+      style={styles.paragraph}>
+        A gente acredita que todo animal de rua merece um lar. 
+        Por isso, trabalhamos para conectar os cães que estão em abrigos 
+        com pessoas que estejam procurando por um pet pra chamar de seu.
+        </Text>
+
+
     </ImageBackground>
   );
 }
@@ -56,6 +67,7 @@ const styles = StyleSheet.create({
   },
   membrosContainer: {
     flex: 1,
+    flexDirection: 'row',
     alignItems: "center",
     justifyContent: 'center'
   },
@@ -84,5 +96,13 @@ const styles = StyleSheet.create({
     borderRadius: 19,
     alignSelf: 'center',
     marginTop: 20
+  },
+  paragraph:{
+    backgroundColor: '#DDA0DD',
+    padding: 15,
+    borderRadius: 20,
+    marginBottom: 70,
+    marginHorizontal: 30, 
+    fontWeight: 'bold'
   }
 });

@@ -4,6 +4,7 @@ import { View, FlatList, Image, Text, StyleSheet, Dimensions, ImageBackground } 
 const { width, height } = Dimensions.get("window")
 const IMAGE_WIDTH = width
 
+
 export default function DogImagesScreen() {
     const [dogImages, setDogImages] = useState([])
     const [loading, setLoading] = useState(true)
@@ -24,6 +25,7 @@ export default function DogImagesScreen() {
       fetchDogImages()
     }, [])
   
+
     const renderItem = ({ item }) => (
       <ImageBackground
       source={require('../../assets/bg.png')}
@@ -52,6 +54,7 @@ export default function DogImagesScreen() {
           <FlatList
             data={dogImages}
             renderItem={renderItem}
+           
             keyExtractor={(item, index) => index.toString()}
             numColumns={2}
             columnWrapperStyle={styles.columnWrapper} 

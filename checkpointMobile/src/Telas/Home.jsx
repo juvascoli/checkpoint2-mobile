@@ -8,14 +8,14 @@ export default function Home({ navigation }) {
     <ImageBackground 
     source={require('../../assets/bg.png')}
     style={styles.container}>
-      <Text style={styles.title}>Bem vindo ao 4 Patas!</Text>
+      <Text style={styles.title}>Bem vindo ao 4Patas!</Text>
       
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Us")}>
-        <Text style={styles.subtitle}>Conheça nossa equipe</Text>
+        <Text style={styles.subtitle}>Quem somos?</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate("Dogs") }>
-        <Text style={styles.subtitle}>Veja todos os cachorros</Text>
+        <Text style={styles.subtitle}>Adote um cachorro</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate("Description")}>
