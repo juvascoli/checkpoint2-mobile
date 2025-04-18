@@ -5,6 +5,7 @@ export default function Description(){
     return(
         <ImageBackground
         source={require('../../assets/bg.png')}
+        style={styles.container}
         >
 
 
@@ -12,3 +13,11 @@ export default function Description(){
 
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  });

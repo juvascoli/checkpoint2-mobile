@@ -38,7 +38,7 @@ export default function DogImagesScreen() {
         source={require('../../assets/dog-icon.png')} 
         style={styles.headerIcon} 
       />
-          <Text style={styles.headerText}>Conheça todos os Dogs</Text>
+          <Text style={styles.headerText}>Pets para adoção</Text>
         </View>
       );
   

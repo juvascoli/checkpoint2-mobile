@@ -2,21 +2,23 @@ import React from 'react';
 import {  Text, View, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 
 export default function Home({ navigation }) {
+  
+
   return (
     <ImageBackground 
     source={require('../../assets/bg.png')}
     style={styles.container}>
       <Text style={styles.title}>Bem vindo ao 4 Patas!</Text>
       
-      <TouchableOpacity onPress={() => navigation.navigate("Us")}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Us")}>
         <Text style={styles.subtitle}>Conheça nossa equipe</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Dogs") }>
+      <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate("Dogs") }>
         <Text style={styles.subtitle}>Veja todos os cachorros</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate("Description")}>
+      <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate("Description")}>
         <Text style={styles.subtitle}>Por que adotar?</Text>
       </TouchableOpacity>
 
@@ -38,7 +40,18 @@ const styles = StyleSheet.create({
   subtitle:{
     fontSize: 18,
     textAlign: 'center',
-    color: '#555',
     lineHeight: 26,
-  }
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  button: {
+    backgroundColor: '#6A0DAD', 
+    paddingVertical: 12,
+    paddingHorizontal: 25,
+    borderRadius: 30,
+    alignItems: 'center',
+    alignSelf: 'center',
+    marginTop: 20
+  },
 });

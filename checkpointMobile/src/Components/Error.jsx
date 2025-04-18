@@ -4,10 +4,10 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground } from
 export default function ErrorScreen({ navigation }) {
   return (
 
-    <ImageBackground  source={require('../../assets/bg.png')}
-    >
+    <ImageBackground  source={require('../../assets/bg.png')} >
       <Image
         source={require('../../assets/404.avif')}
+        style={styles.container}
       />
 
       <TouchableOpacity
@@ -19,4 +19,23 @@ export default function ErrorScreen({ navigation }) {
     </ImageBackground>
  
   );
+
+
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    button: {
+        backgroundColor: '#6A0DAD', 
+        paddingVertical: 12,
+        paddingHorizontal: 25,
+        borderRadius: 30,
+        alignItems: 'center',
+        alignSelf: 'center',
+        marginTop: 20
+      }
+  });
