@@ -74,7 +74,7 @@ export default function DogImagesScreen() {
         padding: 10,
         backgroundColor: '#DDA0DD',
         borderRadius: 10,
-        width: '100%', 
+        width: '100%'
       }, headerText: {
         fontSize: 20,
         fontWeight: 'bold',

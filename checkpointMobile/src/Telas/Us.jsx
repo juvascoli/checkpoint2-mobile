@@ -4,11 +4,10 @@ import { View, Image, Text, ScrollView, TouchableOpacity, Linking, StyleSheet, I
 const Equipe = ({ imageSource, name, rm, githubUrl }) => (
   <View style={styles.membroContainer}>
     <Image source={imageSource} style={styles.image} />
-    <Text>{name}</Text>
-    <Text>RM: {rm}</Text>
+    <Text style={styles.descricao}>{name}</Text>
+    <Text style={styles.descricao}>RM: {rm}</Text>
     
-    <TouchableOpacity onPress={() => Linking.openURL(githubUrl)} style={styles.btn}>
-      <Text>Git:</Text>
+    <TouchableOpacity onPress={() => Linking.openURL(githubUrl)} style={styles.button}>
       <Image source={require("../../assets/gitlogo.png")} style={styles.githubImage} />
     </TouchableOpacity>
   </View>
@@ -19,7 +18,7 @@ export default function Us() {
     <ImageBackground 
     source={require('../../assets/bg.png')}
     style={styles.container}>
-      <Text style={styles.title}>Nosso Time</Text>
+      <Text style={styles.title}>Membros</Text>
       <ScrollView contentContainerStyle={styles.membrosContainer}>
         <Equipe 
           imageSource={require("../../assets/matheus.png")} 
@@ -44,28 +43,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
+  descricao:{
+    fontWeight: "bold",
+    color: '#333'
+
+  },
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 20,
-    color: 'white'
+    marginTop: 50,
+    color: '#333',
   },
   membrosContainer: {
+    flex: 1,
     alignItems: "center",
-    padding: 30,
-    borderRadius: 15,
-    marginBottom: 20,
-    width: 400
+    justifyContent: 'center'
   },
   membroContainer: {
     alignItems: "center",
-    marginBottom: 20,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
-    elevation: 5,
-    padding: 40
+    padding: 20
   },
   image: {
     width: 100,
@@ -81,13 +77,12 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginTop: 10,
   },
-  btn: {
-    borderRadius: 10,
-    padding: 10,
-    marginTop: 10,
-    width: 100,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: "#000"
+  button: {
+    backgroundColor: '#DDA0DD',
+    paddingVertical: 10,
+    paddingHorizontal: 50,
+    borderRadius: 19,
+    alignSelf: 'center',
+    marginTop: 20
   }
 });
