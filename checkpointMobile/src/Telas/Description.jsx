@@ -1,9 +1,14 @@
-import { View, Text } from "react-native";
+import React from 'react';
+import {  Text, View, ImageBackground, StyleSheet } from 'react-native';
 
 export default function Description(){
     return(
-        <View>
-            <Text>Tela de descrição </Text>
-        </View>
+        <ImageBackground
+        source={require('../../assets/bg.png')}
+        >
+
+
+        </ImageBackground>
+
     )
 }
