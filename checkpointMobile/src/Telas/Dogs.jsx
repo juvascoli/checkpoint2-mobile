@@ -36,10 +36,6 @@ export default function DogImagesScreen() {
 
     const renderHeader = () => (
         <View style={styles.headerContainer}>
-            <Image 
-        source={require('../../assets/dog-icon.png')} 
-        style={styles.headerIcon} 
-      />
           <Text style={styles.headerText}>Pets para adoção</Text>
         </View>
       );
@@ -89,16 +85,12 @@ export default function DogImagesScreen() {
         margin: 100,
         justifyContent: 'center',
         alignItems: 'center',
-    },headerIcon: {
-        width: 50,
-        height: 30,
-        borderRadius: 15, 
       },image: {
         width: IMAGE_WIDTH / 2.3,
         height: IMAGE_WIDTH / 2.3,
         margin: IMAGE_WIDTH * 0.3, 
         borderRadius: 5,
-    },columnWrapper: {
+      },columnWrapper: {
         justifyContent: 'space-between', 
     },
   })

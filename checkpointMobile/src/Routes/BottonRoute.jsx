@@ -4,7 +4,6 @@ import Home from '../Telas/Home';
 
 import { Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "react-native-vector-icons";
 
 
 const Tab = createBottomTabNavigator();

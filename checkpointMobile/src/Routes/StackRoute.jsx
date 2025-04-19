@@ -14,7 +14,7 @@ export default function StackNavigator(){
       <Stack.Navigator 
       screenOptions={{ headerTitle: () => (
         <Image
-          source={require('../../assets/dog-icon.png')}
+          source={require('../../assets/logo.png')}
           style={{ width: 120, height: 40, resizeMode: 'contain' }}
         /> 
       )}}> 
