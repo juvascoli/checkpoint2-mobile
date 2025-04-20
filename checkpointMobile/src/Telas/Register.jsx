@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {  SafeAreaView , Text, TextInput, TouchableOpacity, View, ImageBackground, StyleSheet } from 'react-native';
 
-export default function Register() {
+export default function Register({ navigation }) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 

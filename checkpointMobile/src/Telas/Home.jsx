@@ -67,6 +67,11 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     alignItems: 'center',
     alignSelf: 'center',
-    marginTop: 20
+    marginTop: 20,
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 4,
   },
 });
