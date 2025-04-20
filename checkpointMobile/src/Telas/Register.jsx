@@ -25,7 +25,7 @@ export default function Register() {
           value={senha}
           onChangeText={setSenha}
         />
-         <TouchableOpacity style={styles.button}>
+         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Dogs")}>
           <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
         </View>

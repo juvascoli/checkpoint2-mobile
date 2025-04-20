@@ -15,9 +15,10 @@ export default function StackNavigator(){
       screenOptions={{ headerTitle: () => (
         <Image
           source={require('../../assets/logo.png')}
-          style={{ width: 120, height: 40, resizeMode: 'contain' }}
+          style={styles.headerLogo}
         /> 
-      )}}> 
+      ),
+      headerTitleAlign: 'center'}}> 
         <Stack.Screen name="Home" component={TabNavigator}/>
         <Stack.Screen name="Us" component={Us} />
         <Stack.Screen name="Dogs" component={Dogs}/>
@@ -25,3 +26,14 @@ export default function StackNavigator(){
       </Stack.Navigator>
   )
 }
+
+ 
+const styles = StyleSheet.create({
+  headerLogo:{
+    width:120,
+    height: 50,
+    resizeMode: 'contain'
+
+  }
+
+})

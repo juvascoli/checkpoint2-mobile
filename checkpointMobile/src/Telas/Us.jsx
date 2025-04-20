@@ -35,14 +35,15 @@ export default function Us() {
         />
 
       </ScrollView>
-
-      <Text 
-      style={styles.paragraph}>
+      <View style={styles.card}>
+        <Text style={styles.cardTitle}>Propósito</Text>
+        <Text>
         A gente acredita que todo animal de rua merece um lar. 
         Por isso, trabalhamos para conectar os cães que estão em abrigos 
         com pessoas que estejam procurando por um pet pra chamar de seu.
         </Text>
 
+      </View>
 
     </ImageBackground>
   );
@@ -93,14 +94,30 @@ const styles = StyleSheet.create({
     paddingHorizontal: 50,
     borderRadius: 19,
     alignSelf: 'center',
-    marginTop: 20
-  },
-  paragraph:{
+    marginTop: 20,
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 4,
+    },
+  card:{
     backgroundColor: '#DDA0DD',
     padding: 15,
     borderRadius: 20,
     marginBottom: 70,
     marginHorizontal: 30,
-    color: '#333'
+    color: '#333', 
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 4,
+  },
+  cardTitle:{
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8
   }
+
 });

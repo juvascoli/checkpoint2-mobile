@@ -1,27 +1,37 @@
-import React from 'react';
-import {  Text, View, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
+import { useFonts } from 'expo-font';
 
 export default function Home({ navigation }) {
-  
+  const [fontsLoaded] = useFonts({
+    'Poppins-ExtraBold': require('../../assets/fonts/Poppins ExtraBold.ttf'),
+    'Roboto': require('../../assets/fonts/Roboto Condensed Regular.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
     <ImageBackground 
-    source={require('../../assets/bg.png')}
-    style={styles.container}>
-      <Text style={styles.title}>Bem vindo ao 4Patas!</Text>
-      
+      source={require('../../assets/bg.png')}
+      style={styles.container}
+    >
+      <View style={styles.welcome}>
+        <Text style={styles.title}>Bem vindo ao</Text>
+        <Text style={styles.logoTitle}> 4patas!</Text>
+      </View>
+
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Us")}>
         <Text style={styles.subtitle}>Quem somos?</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate("Dogs") }>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Dogs")}>
         <Text style={styles.subtitle}>Adote um cachorro</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate("Description")}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Description")}>
         <Text style={styles.subtitle}>Por que adotar?</Text>
       </TouchableOpacity>
-
     </ImageBackground>
   );
 }
@@ -32,17 +42,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
+  welcome: {
+    flexDirection: 'row'
+  },
   title: {
     fontSize: 24,
-    marginBottom: 20
+    marginBottom: 20,
+    fontFamily: 'Roboto'
   },
-  subtitle:{
-    fontSize: 18,
+  logoTitle: {
+    color: '#6A0DAD',
+    fontSize: 24
+  },
+  subtitle: {
+    fontSize: 16,
     textAlign: 'center',
     lineHeight: 26,
     color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold'
   },
   button: {
     backgroundColor: '#6A0DAD', 
