@@ -4,7 +4,6 @@ import { View, FlatList, Image, Text, StyleSheet, Dimensions, ImageBackground } 
 const { width, height } = Dimensions.get("window")
 const IMAGE_WIDTH = width
 
-
 export default function DogImagesScreen() {
     const [dogImages, setDogImages] = useState([])
     const [loading, setLoading] = useState(true)
@@ -66,11 +65,11 @@ export default function DogImagesScreen() {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      padding: 10,
+      padding: 6,
     }, headerContainer: {
         alignItems: 'center',
         marginBottom: 10,
-        padding: 10,
+        padding:10,
         backgroundColor: '#DDA0DD',
         borderRadius: 10,
         width: '100%'
